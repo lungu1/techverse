@@ -8,6 +8,11 @@ import WebDesign from './pages/services/WebDesign';
 import WebDevelopment from './pages/services/WebDevelopment';
 import Maintenance from './pages/services/Maintenance';
 import Footer from './components/Footer';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 function App() {
   return (
@@ -15,11 +20,17 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/services/design" element={<WebDesign />} />
         <Route path="/services/development" element={<WebDevelopment />} />
         <Route path="/services/maintenance" element={<Maintenance />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog/:id" element={<BlogPostPage />} />
       </Routes>
+      
       <Footer />
     </Router>
   );
